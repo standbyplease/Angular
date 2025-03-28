@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        /* Button Styles */
+        button {
+            padding: 10px 20px;
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            button {
+                font-size: 1rem;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>About Us</h1>
+    </header>
+    <main>
+        <p>Welcome to the about page of our simple Express.js application. Here you can find information about our
+            project and its purpose.</p>
+
+        <button id="more-info-btn">Show More Information</button>
+
+        <div id="more-info" style="display: none; margin-top: 20px;">
+            <h3>Our Project</h3>
+            <p>This project is a simple demonstration of building a web application using Express.js. The goal of this
+                app is to provide users with a basic example of how to set up and structure a web application in
+                Node.js,
+                using the Express framework.</p>
+            <p>We aim to make this project modular and scalable so that developers can extend it with more features,
+                like
+                user authentication, database integration, and more.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Simple Express App</p>
+    </footer>
+
+    <script>
+        // JavaScript to toggle the visibility of additional information
+        const moreInfoButton = document.getElementById('more-info-btn');
+        const moreInfoDiv = document.getElementById('more-info');
+
+        moreInfoButton.addEventListener('click', function () {
+            // Toggle the display of the more information section
+            if (moreInfoDiv.style.display === 'none' || moreInfoDiv.style.display === '') {
+                moreInfoDiv.style.display = 'block';
+                moreInfoButton.textContent = 'Show Less Information'; // Change button text
+            } else {
+                moreInfoDiv.style.display = 'none';
+                moreInfoButton.textContent = 'Show More Information'; // Change button text back
+            }
+        });
+    </script>
+</body>
+
+</html>
